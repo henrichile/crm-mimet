@@ -90,6 +90,8 @@
             {{ $lead->lead_source ?? '---'  }}</span>
         @endif
     </div>
+
+    xxxxxxxxxxxxxxxxxxxxxx
     <div class="x-footer row">
         <div class="col-6 x-icons">
 
