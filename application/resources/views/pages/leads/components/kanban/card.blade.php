@@ -89,8 +89,8 @@
         <span class="wordwrap"><strong>{{ cleanLang(__('lang.source')) }}:</strong>
             {{ $lead->lead_source ?? '---'  }}</span>
         @endif
-        <span class="wordwrap"><strong>{{ cleanLang(__('lang.country')) }}:</strong>
-            {{ $lead->lead_country ?? '---'  }}</span>
+        <span class="wordwrap"><strong>{{ cleanLang(__('lang.lead_custom_field_9')) }}:</strong>
+            {{ $lead->lead_custom_field_9 ?? '---'  }}</span>
     </div>
 
     
