@@ -31,7 +31,7 @@
     <th>Estado Leads</th>
     <th>Fecha Creación</th>
     <th>Hora Creación</th>
-    <th>Inscrito por</th>
+    <th>Usuario</th>
     <th>Fecha Ultima actualización</th>
     <th>Hora Ultima actualización</th>
   </tr>
