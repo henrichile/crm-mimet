@@ -18,5 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::post('leads/nuevo', 'LeadsApi@store');
+Route::any('leads/nuevo', 'LeadsApi@store');
 Route::post('leads/nuevo/facebook', 'LeadsApi@storefacebook');

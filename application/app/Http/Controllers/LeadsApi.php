@@ -47,36 +47,54 @@ class LeadsApi extends Controller
             //default position increment
             $position = config('settings.db_position_increment');
         }
-        
-        
-         $data=$request->all();
+         $data=$request->all();     
+     
          $lead= new Lead();
          if(isset($data['formulario'])){
             $lead->lead_title=$data['formulario'];
          }else{
              $lead->lead_title="Formulario Home";
          }
-         $lead->lead_firstname=$data['nombre'];
-         $lead->lead_lastname=$data['apellido'];
+         $lead->lead_firstname=$data['names']['first_name'];
+         $lead->lead_lastname=$data['names']['last_name'];
          if(isset($data['telefono'])){
             $lead->lead_phone=$data['telefono'];
          }
-         $lead->lead_email=$data['correo'];
-         $lead->lead_source=$data['source'];
+         $lead->lead_email=$data['email'];
+         $lead->lead_source="miretail.cl";
          if(isset($data['mensaje'])){
-         $lead->lead_description=$data['mensaje'];
+         	$lead->lead_description=$data['mensaje'];
          }
-         if(isset($data['curso'])){
-         $lead->lead_custom_field_1=$data['curso'];
+         if(isset($data['rut'])){
+         	$lead->lead_custom_field_1=$data['rut'];
          }
-         if(isset($data['sede'])){
-         $lead->lead_custom_field_2=$data['sede'];
+         if(isset($data['tipo_empresa'])){
+         	$lead->lead_custom_field_2=$data['tipo_empresa'];
+         }
+      	 if(isset($data['cantidad'])){
+         	$lead->lead_custom_field_3=$data['cantidad'];
+         }
+         if(isset($data['empresa'])){
+         	$lead->lead_custom_field_4=$data['empresa'];
+         }
+         if(isset($data['producto'])){
+         	$lead->lead_custom_field_5=$data['producto'];
+         }
+        if(isset($data['__submission']['source_url'])){
+         	$lead->lead_custom_field_6=$data['__submission']['source_url'];
+         }
+      	if(isset($data['tipo_servicio'])){
+         	$lead->lead_custom_field_7=$data['tipo_servicio'];
+         }
+        if(isset($data['numero_de_serie'])){
+         	$lead->lead_custom_field_8=$data['numero_de_serie'];
+         }
+      	if(isset($data['pais'])){
+         	$lead->lead_custom_field_9=$data['pais'];
          }
          
          
-         
-         
-         $lead->lead_categoryid=60;
+         $lead->lead_categoryid=1;
          $lead->lead_position=$position;
          if($lead->save()){
              return response()->json("correcto", 201);
