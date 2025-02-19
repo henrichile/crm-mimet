@@ -89,9 +89,11 @@
         <span class="wordwrap"><strong>{{ cleanLang(__('lang.source')) }}:</strong>
             {{ $lead->lead_source ?? '---'  }}</span>
         @endif
+        <span class="wordwrap"><strong>{{ cleanLang(__('lang.country')) }}:</strong>
+            {{ $lead->lead_country ?? '---'  }}</span>
     </div>
 
-    xxxxxxxxxxxxxxxxxxxxxx
+    
     <div class="x-footer row">
         <div class="col-6 x-icons">
 
