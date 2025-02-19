@@ -18,8 +18,16 @@
     <th>Formulario</th>
     <th>Observación Cliente</th>
     <th>Valor del lead</th>
-    <th>Curso</th>
-    <th>Sede</th>
+
+    <th>Rut</th>
+    <th>Tipo empresa</th>
+    <th>Cantidad a cotizar</th>
+    <th>Empresa</th>
+    <th>Producto</th>
+    <th>Tipo de servicio</th>
+    <th>Numero de serie</th>
+    <th>pais</th>
+
     <th>Estado Leads</th>
     <th>Fecha Creación</th>
     <th>Hora Creación</th>
@@ -64,6 +72,12 @@
     <td>{{ number_format($item->lead_value,0,",",".") }}</td>
     <td>{{ $item->lead_custom_field_1 }}</td>
     <td>{{ $item->lead_custom_field_2 }}</td>
+    <td>{{ $item->lead_custom_field_3 }}</td>
+    <td>{{ $item->lead_custom_field_4 }}</td>
+    <td>{{ $item->lead_custom_field_5 }}</td>
+    <td>{{ $item->lead_custom_field_7 }}</td>
+    <td>{{ $item->lead_custom_field_8 }}</td>
+    <td>{{ $item->lead_custom_field_9 }}</td>
     <td>{{ $item->leadstatus_title }}</td>
     <td>{{ $fecreacion }}</td>
     <td>{{ $fcrea[1] }}</td>
